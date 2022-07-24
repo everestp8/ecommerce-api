@@ -29,7 +29,10 @@ export default (() => {
 	}
 
 	async function updateProduct (req: Request, res: Response, next: NextFunction) {
-		return res.status(200).json({ hello: 'world' })
+		const { id } = req.params
+		const { name, price } = req.body
+		const message = await ProductService.updateProduct(id, { name, price })
+		return res.status(200).json(message)
 	}
 
 	return {

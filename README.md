@@ -41,8 +41,7 @@ npm run dev
 - [x] Permitir a remoçâo de produtos
 - [x] Permitir o retorno de um produto específico
 - [x] Permitir o retorno de todos os produtos
-- [ ] Permitir a edição de um produto
-
+- [x] Permitir a edição de um produto
 ### Imagens
 - [ ] Criar a tabela no banco
 - [ ] Criar rotas, controllers e services base

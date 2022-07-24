@@ -41,8 +41,17 @@ export default (() => {
 		return products
 	}
 
-	async function updateProduct () {
-
+	async function updateProduct (productUUID: string, productData: Product) {
+		const { name, price } = productData
+		await prismaClient.product.update({
+			where: {
+				id: productUUID
+			},
+			data: {
+				name,
+				price
+			}
+		})
 	}
 
 	return {
