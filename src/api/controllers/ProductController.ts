@@ -8,26 +8,28 @@ export default (() => {
 			name,
 			price
 		})
-		res.status(201).json(message)
+		return res.status(201).json(message)
 	}
 
 	async function deleteProduct (req: Request, res: Response, next: NextFunction) {
 		const { id } = req.params
 		const message = await ProductService.deleteProduct(id)
-		res.status(200).json(message)
+		return res.status(200).json(message)
 	}
 
 	async function findOneProduct (req: Request, res: Response, next: NextFunction) {
-		res.status(200).json({ hello: 'world' })
+		const { id } = req.params
+		const message = await ProductService.findOneProduct(id)
+		return res.status(200).json(message)
 	}
 
 	async function findAllProducts (req: Request, res: Response, next: NextFunction) {
 		const products = await ProductService.findAllProducts()
-		res.status(200).json(products)
+		return res.status(200).json(products)
 	}
 
 	async function updateProduct (req: Request, res: Response, next: NextFunction) {
-		res.status(200).json({ hello: 'world' })
+		return res.status(200).json({ hello: 'world' })
 	}
 
 	return {

@@ -39,7 +39,7 @@ npm run dev
 - [ ] Criar testes
 - [x] Permitir a criação de produtos
 - [x] Permitir a remoçâo de produtos
-- [ ] Permitir o retorno de um produto específico
+- [x] Permitir o retorno de um produto específico
 - [x] Permitir o retorno de todos os produtos
 - [ ] Permitir a edição de um produto
 

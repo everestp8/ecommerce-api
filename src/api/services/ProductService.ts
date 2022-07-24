@@ -27,8 +27,13 @@ export default (() => {
 		return { msg: 'Product deleted.' }
 	}
 
-	async function findOneProduct () {
-
+	async function findOneProduct (productUUID: string) {
+		const product = await prismaClient.product.findUnique({
+			where: {
+				id: productUUID
+			}
+		})
+		return product
 	}
 
 	async function findAllProducts () {
