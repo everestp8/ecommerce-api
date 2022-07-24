@@ -1,4 +1,5 @@
 import express from 'express'
+import 'express-async-errors'
 import bodyparser from 'body-parser'
 import cors from 'cors'
 import { router, path } from './routes'
